@@ -25,8 +25,10 @@
 		D7065AA22763F116005A8AA8 /* TicketStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065AA02763F116005A8AA8 /* TicketStore.swift */; };
 		D7065AA42763F446005A8AA8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065AA32763F446005A8AA8 /* Extension.swift */; };
 		D7065AA52763F446005A8AA8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065AA32763F446005A8AA8 /* Extension.swift */; };
-		D7065AA827640232005A8AA8 /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065AA727640232005A8AA8 /* TicketView.swift */; };
-		D7065AA927640232005A8AA8 /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065AA727640232005A8AA8 /* TicketView.swift */; };
+		D7065AAC2764BC27005A8AA8 /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065AAB2764BC27005A8AA8 /* RoundedCornersShape.swift */; };
+		D7065AAD2764BC27005A8AA8 /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065AAB2764BC27005A8AA8 /* RoundedCornersShape.swift */; };
+		D724743D27653093009A27F6 /* TicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724743C27653093009A27F6 /* TicketsView.swift */; };
+		D724743E27653093009A27F6 /* TicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724743C27653093009A27F6 /* TicketsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +65,8 @@
 		D7065A9D2763F008005A8AA8 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		D7065AA02763F116005A8AA8 /* TicketStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketStore.swift; sourceTree = "<group>"; };
 		D7065AA32763F446005A8AA8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		D7065AA727640232005A8AA8 /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
+		D7065AAB2764BC27005A8AA8 /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
+		D724743C27653093009A27F6 /* TicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				D7065A5B2763E46B005A8AA8 /* UnicoCampaniaApp.swift */,
-				D7065AA32763F446005A8AA8 /* Extension.swift */,
+				D7065AAA2764BBF6005A8AA8 /* Utilities */,
 				D7065A5A2763E46B005A8AA8 /* View */,
 				D7065AA62763F769005A8AA8 /* Model */,
 				D7065A972763EBD6005A8AA8 /* Color.xcassets */,
@@ -118,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				D7065A5C2763E46B005A8AA8 /* MainView.swift */,
-				D7065AA727640232005A8AA8 /* TicketView.swift */,
+				D724743C27653093009A27F6 /* TicketsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +170,15 @@
 				D7065A9D2763F008005A8AA8 /* Ticket.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D7065AAA2764BBF6005A8AA8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D7065AA32763F446005A8AA8 /* Extension.swift */,
+				D7065AAB2764BC27005A8AA8 /* RoundedCornersShape.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,10 +341,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7065AA827640232005A8AA8 /* TicketView.swift in Sources */,
+				D724743D27653093009A27F6 /* TicketsView.swift in Sources */,
 				D7065AA42763F446005A8AA8 /* Extension.swift in Sources */,
 				D7065A852763E46D005A8AA8 /* MainView.swift in Sources */,
 				D7065AA12763F116005A8AA8 /* TicketStore.swift in Sources */,
+				D7065AAC2764BC27005A8AA8 /* RoundedCornersShape.swift in Sources */,
 				D7065A832763E46D005A8AA8 /* UnicoCampaniaApp.swift in Sources */,
 				D7065A9E2763F009005A8AA8 /* Ticket.swift in Sources */,
 			);
@@ -342,10 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7065AA927640232005A8AA8 /* TicketView.swift in Sources */,
+				D724743E27653093009A27F6 /* TicketsView.swift in Sources */,
 				D7065AA52763F446005A8AA8 /* Extension.swift in Sources */,
 				D7065A862763E46D005A8AA8 /* MainView.swift in Sources */,
 				D7065AA22763F116005A8AA8 /* TicketStore.swift in Sources */,
+				D7065AAD2764BC27005A8AA8 /* RoundedCornersShape.swift in Sources */,
 				D7065A842763E46D005A8AA8 /* UnicoCampaniaApp.swift in Sources */,
 				D7065A9F2763F009005A8AA8 /* Ticket.swift in Sources */,
 			);

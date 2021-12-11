@@ -9,15 +9,20 @@ import Foundation
 import SwiftUI
 
 
-struct Ticket{
+struct Ticket:Identifiable{
     
+    
+    var id = UUID()
     var company: String
     var ticketTipology: String
-    var expiredDate: Date
+    var expiredDate: Date?
     var expired: Bool
     var route: String
     var gradient:LinearGradient
     var Image:String
+    
+    
+    
     
 }
 

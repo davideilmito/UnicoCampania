@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct MainView: View {
+    
     var body: some View {
        
         TabView{
             
-            TicketView()
+            TicketsView()
                 
             .tabItem{
                
@@ -21,7 +22,7 @@ struct MainView: View {
             }
             
             
-            Text("Tram")
+            Text("Route")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 
@@ -47,7 +48,7 @@ struct MainView: View {
             
             
             
-            Text("Stores")
+            Text("Shop")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 
@@ -61,6 +62,8 @@ struct MainView: View {
             
             
         }.accentColor(.white)
+        
+              
         
         
     }

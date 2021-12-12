@@ -21,12 +21,11 @@ struct MainView: View {
             
             }
             
+        ScrollView(.vertical,showsIndicators: false){
             
-            Text("Route")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                
+           FullActiveTicketCardView()
             
+            }
             .tabItem{
             
                 Label("Route",systemImage: "tram" )

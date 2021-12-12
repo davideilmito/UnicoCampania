@@ -108,9 +108,7 @@ struct ActiveTicketsView: View {
                                 } //VstackCard
                                 
                                 .padding(EdgeInsets(top: 0, leading: 18, bottom: 0, trailing: 18))
-                                
-                                
-                                
+        
                                 
                                 if let expiredDate = ticket.expiredDate{
                                     

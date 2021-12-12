@@ -19,6 +19,7 @@ extension Color {
     static let eavSecondaryColor = Color("EavColorSecondary")
     static let tirreniaSecondaryColor = Color("TirreniaPrimary")
     static let tirreniaPrimaryColor = Color("TirreniaSecondary")
+    static let backgroundFullCardView = Color("backgroundFullTicketView")
 
     
 }

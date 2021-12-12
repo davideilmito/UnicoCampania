@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct UnicoCampaniaApp: App {
+    
+    @StateObject var tickets = TicketStore()
+    
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView().environmentObject(tickets)
         }
     }
 }

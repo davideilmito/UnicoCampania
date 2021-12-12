@@ -29,6 +29,18 @@
 		D7065AAD2764BC27005A8AA8 /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065AAB2764BC27005A8AA8 /* RoundedCornersShape.swift */; };
 		D724743D27653093009A27F6 /* TicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724743C27653093009A27F6 /* TicketsView.swift */; };
 		D724743E27653093009A27F6 /* TicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724743C27653093009A27F6 /* TicketsView.swift */; };
+		D7247444276565B9009A27F6 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7247443276565B9009A27F6 /* SF-Pro-Text-Bold.otf */; };
+		D7247445276565B9009A27F6 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7247443276565B9009A27F6 /* SF-Pro-Text-Bold.otf */; };
+		D724744827656808009A27F6 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D724744727656808009A27F6 /* SF-Pro-Text-Regular.otf */; };
+		D724744927656808009A27F6 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D724744727656808009A27F6 /* SF-Pro-Text-Regular.otf */; };
+		D724744A276568FD009A27F6 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D724744727656808009A27F6 /* SF-Pro-Text-Regular.otf */; };
+		D724744B276568FD009A27F6 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D724744727656808009A27F6 /* SF-Pro-Text-Regular.otf */; };
+		D724744D2765FC32009A27F6 /* ActiveTicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724744C2765FC32009A27F6 /* ActiveTicketsView.swift */; };
+		D724744E2765FC32009A27F6 /* ActiveTicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724744C2765FC32009A27F6 /* ActiveTicketsView.swift */; };
+		D72474502765FFBC009A27F6 /* InactiveTicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724744F2765FFBC009A27F6 /* InactiveTicketsView.swift */; };
+		D72474512765FFBC009A27F6 /* InactiveTicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724744F2765FFBC009A27F6 /* InactiveTicketsView.swift */; };
+		D72474542766111F009A27F6 /* FullTicketCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72474532766111F009A27F6 /* FullTicketCardView.swift */; };
+		D72474552766111F009A27F6 /* FullTicketCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72474532766111F009A27F6 /* FullTicketCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +79,12 @@
 		D7065AA32763F446005A8AA8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		D7065AAB2764BC27005A8AA8 /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		D724743C27653093009A27F6 /* TicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsView.swift; sourceTree = "<group>"; };
+		D7247443276565B9009A27F6 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		D7247446276566D3009A27F6 /* UnicoCampania--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "UnicoCampania--iOS--Info.plist"; sourceTree = "<group>"; };
+		D724744727656808009A27F6 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		D724744C2765FC32009A27F6 /* ActiveTicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTicketsView.swift; sourceTree = "<group>"; };
+		D724744F2765FFBC009A27F6 /* InactiveTicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveTicketsView.swift; sourceTree = "<group>"; };
+		D72474532766111F009A27F6 /* FullTicketCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTicketCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +122,9 @@
 		D7065A552763E46B005A8AA8 = {
 			isa = PBXGroup;
 			children = (
+				D7247446276566D3009A27F6 /* UnicoCampania--iOS--Info.plist */,
 				D7065A5B2763E46B005A8AA8 /* UnicoCampaniaApp.swift */,
+				D7247442276565A3009A27F6 /* Fonts */,
 				D7065AAA2764BBF6005A8AA8 /* Utilities */,
 				D7065A5A2763E46B005A8AA8 /* View */,
 				D7065AA62763F769005A8AA8 /* Model */,
@@ -112,7 +132,6 @@
 				D7065A5D2763E46D005A8AA8 /* Assets.xcassets */,
 				D7065A692763E46D005A8AA8 /* macOS */,
 				D7065A722763E46D005A8AA8 /* Tests iOS */,
-				D7065A7E2763E46D005A8AA8 /* Tests macOS */,
 				D7065A632763E46D005A8AA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D7065A5C2763E46B005A8AA8 /* MainView.swift */,
-				D724743C27653093009A27F6 /* TicketsView.swift */,
+				D724745227660FEE009A27F6 /* TicketsView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +159,7 @@
 		D7065A692763E46D005A8AA8 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				D7065A7E2763E46D005A8AA8 /* Tests macOS */,
 				D7065A6A2763E46D005A8AA8 /* macOS.entitlements */,
 			);
 			path = macOS;
@@ -179,6 +199,26 @@
 				D7065AAB2764BC27005A8AA8 /* RoundedCornersShape.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D7247442276565A3009A27F6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D724744727656808009A27F6 /* SF-Pro-Text-Regular.otf */,
+				D7247443276565B9009A27F6 /* SF-Pro-Text-Bold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D724745227660FEE009A27F6 /* TicketsView */ = {
+			isa = PBXGroup;
+			children = (
+				D724744F2765FFBC009A27F6 /* InactiveTicketsView.swift */,
+				D72474532766111F009A27F6 /* FullTicketCardView.swift */,
+				D724744C2765FC32009A27F6 /* ActiveTicketsView.swift */,
+				D724743C27653093009A27F6 /* TicketsView.swift */,
+			);
+			path = TicketsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +348,8 @@
 			files = (
 				D7065A872763E46D005A8AA8 /* Assets.xcassets in Resources */,
 				D7065A982763EBD6005A8AA8 /* Color.xcassets in Resources */,
+				D724744827656808009A27F6 /* SF-Pro-Text-Regular.otf in Resources */,
+				D7247444276565B9009A27F6 /* SF-Pro-Text-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +359,8 @@
 			files = (
 				D7065A882763E46D005A8AA8 /* Assets.xcassets in Resources */,
 				D7065A992763EBD6005A8AA8 /* Color.xcassets in Resources */,
+				D724744927656808009A27F6 /* SF-Pro-Text-Regular.otf in Resources */,
+				D7247445276565B9009A27F6 /* SF-Pro-Text-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D724744A276568FD009A27F6 /* SF-Pro-Text-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D724744B276568FD009A27F6 /* SF-Pro-Text-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,13 +387,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D724744D2765FC32009A27F6 /* ActiveTicketsView.swift in Sources */,
 				D724743D27653093009A27F6 /* TicketsView.swift in Sources */,
 				D7065AA42763F446005A8AA8 /* Extension.swift in Sources */,
 				D7065A852763E46D005A8AA8 /* MainView.swift in Sources */,
+				D72474502765FFBC009A27F6 /* InactiveTicketsView.swift in Sources */,
 				D7065AA12763F116005A8AA8 /* TicketStore.swift in Sources */,
 				D7065AAC2764BC27005A8AA8 /* RoundedCornersShape.swift in Sources */,
 				D7065A832763E46D005A8AA8 /* UnicoCampaniaApp.swift in Sources */,
 				D7065A9E2763F009005A8AA8 /* Ticket.swift in Sources */,
+				D72474542766111F009A27F6 /* FullTicketCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,13 +404,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D724744E2765FC32009A27F6 /* ActiveTicketsView.swift in Sources */,
 				D724743E27653093009A27F6 /* TicketsView.swift in Sources */,
 				D7065AA52763F446005A8AA8 /* Extension.swift in Sources */,
 				D7065A862763E46D005A8AA8 /* MainView.swift in Sources */,
+				D72474512765FFBC009A27F6 /* InactiveTicketsView.swift in Sources */,
 				D7065AA22763F116005A8AA8 /* TicketStore.swift in Sources */,
 				D7065AAD2764BC27005A8AA8 /* RoundedCornersShape.swift in Sources */,
 				D7065A842763E46D005A8AA8 /* UnicoCampaniaApp.swift in Sources */,
 				D7065A9F2763F009005A8AA8 /* Ticket.swift in Sources */,
+				D72474552766111F009A27F6 /* FullTicketCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +572,7 @@
 				DEVELOPMENT_TEAM = 2JCZWJ4U5A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "UnicoCampania--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -550,6 +603,7 @@
 				DEVELOPMENT_TEAM = 2JCZWJ4U5A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "UnicoCampania--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

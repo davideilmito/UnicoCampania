@@ -23,7 +23,11 @@ struct Ticket:Identifiable{
         issuedOn.addingTimeInterval(400)
         
     }
+   
     var description : String = "L'abbonamento va attivato entro il giorno 15 del mese di utilizzo. Valido fino alle ore 24:00 dell'ultimo giorno del mese solare di attivazione"
+    var showticket = false
+    
+    
     
 }
 

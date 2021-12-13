@@ -139,7 +139,9 @@ struct ActiveTicketsView: View {
                             } //ZstackCardView
                             
                             
-                        } //Group
+                        }
+                        //Group
+                        
                         
                     }else {
                         

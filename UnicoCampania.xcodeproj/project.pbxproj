@@ -39,8 +39,8 @@
 		D724744E2765FC32009A27F6 /* ActiveTicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724744C2765FC32009A27F6 /* ActiveTicketsView.swift */; };
 		D72474502765FFBC009A27F6 /* InactiveTicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724744F2765FFBC009A27F6 /* InactiveTicketsView.swift */; };
 		D72474512765FFBC009A27F6 /* InactiveTicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724744F2765FFBC009A27F6 /* InactiveTicketsView.swift */; };
-		D72474542766111F009A27F6 /* FullTicketCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72474532766111F009A27F6 /* FullTicketCardView.swift */; };
-		D72474552766111F009A27F6 /* FullTicketCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72474532766111F009A27F6 /* FullTicketCardView.swift */; };
+		D72474542766111F009A27F6 /* FullActiveTicketCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72474532766111F009A27F6 /* FullActiveTicketCardView.swift */; };
+		D72474552766111F009A27F6 /* FullActiveTicketCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72474532766111F009A27F6 /* FullActiveTicketCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +84,7 @@
 		D724744727656808009A27F6 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		D724744C2765FC32009A27F6 /* ActiveTicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTicketsView.swift; sourceTree = "<group>"; };
 		D724744F2765FFBC009A27F6 /* InactiveTicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveTicketsView.swift; sourceTree = "<group>"; };
-		D72474532766111F009A27F6 /* FullTicketCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTicketCardView.swift; sourceTree = "<group>"; };
+		D72474532766111F009A27F6 /* FullActiveTicketCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullActiveTicketCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,7 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				D724744F2765FFBC009A27F6 /* InactiveTicketsView.swift */,
-				D72474532766111F009A27F6 /* FullTicketCardView.swift */,
+				D72474532766111F009A27F6 /* FullActiveTicketCardView.swift */,
 				D724744C2765FC32009A27F6 /* ActiveTicketsView.swift */,
 				D724743C27653093009A27F6 /* TicketsView.swift */,
 			);
@@ -396,7 +396,7 @@
 				D7065AAC2764BC27005A8AA8 /* RoundedCornersShape.swift in Sources */,
 				D7065A832763E46D005A8AA8 /* UnicoCampaniaApp.swift in Sources */,
 				D7065A9E2763F009005A8AA8 /* Ticket.swift in Sources */,
-				D72474542766111F009A27F6 /* FullTicketCardView.swift in Sources */,
+				D72474542766111F009A27F6 /* FullActiveTicketCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +413,7 @@
 				D7065AAD2764BC27005A8AA8 /* RoundedCornersShape.swift in Sources */,
 				D7065A842763E46D005A8AA8 /* UnicoCampaniaApp.swift in Sources */,
 				D7065A9F2763F009005A8AA8 /* Ticket.swift in Sources */,
-				D72474552766111F009A27F6 /* FullTicketCardView.swift in Sources */,
+				D72474552766111F009A27F6 /* FullActiveTicketCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,11 +21,11 @@ struct MainView: View {
             
             }
             
-        ScrollView(.vertical,showsIndicators: false){
-            
+       
            FullActiveTicketCardView()
             
-            }
+        
+            
             .tabItem{
             
                 Label("Route",systemImage: "tram" )

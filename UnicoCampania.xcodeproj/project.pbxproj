@@ -13,16 +13,12 @@
 		D7065A822763E46D005A8AA8 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065A812763E46D005A8AA8 /* Tests_macOSLaunchTests.swift */; };
 		D7065A832763E46D005A8AA8 /* UnicoCampaniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065A5B2763E46B005A8AA8 /* UnicoCampaniaApp.swift */; };
 		D7065A842763E46D005A8AA8 /* UnicoCampaniaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065A5B2763E46B005A8AA8 /* UnicoCampaniaApp.swift */; };
-		D7065A852763E46D005A8AA8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065A5C2763E46B005A8AA8 /* MainView.swift */; };
-		D7065A862763E46D005A8AA8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065A5C2763E46B005A8AA8 /* MainView.swift */; };
 		D7065A872763E46D005A8AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7065A5D2763E46D005A8AA8 /* Assets.xcassets */; };
 		D7065A882763E46D005A8AA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7065A5D2763E46D005A8AA8 /* Assets.xcassets */; };
 		D7065A982763EBD6005A8AA8 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7065A972763EBD6005A8AA8 /* Color.xcassets */; };
 		D7065A992763EBD6005A8AA8 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7065A972763EBD6005A8AA8 /* Color.xcassets */; };
-		D7065A9E2763F009005A8AA8 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065A9D2763F008005A8AA8 /* Ticket.swift */; };
-		D7065A9F2763F009005A8AA8 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065A9D2763F008005A8AA8 /* Ticket.swift */; };
-		D7065AA12763F116005A8AA8 /* TicketStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065AA02763F116005A8AA8 /* TicketStore.swift */; };
-		D7065AA22763F116005A8AA8 /* TicketStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065AA02763F116005A8AA8 /* TicketStore.swift */; };
+		D7065A9E2763F009005A8AA8 /* UnicoCampania.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065A9D2763F008005A8AA8 /* UnicoCampania.swift */; };
+		D7065A9F2763F009005A8AA8 /* UnicoCampania.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065A9D2763F008005A8AA8 /* UnicoCampania.swift */; };
 		D7065AA42763F446005A8AA8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065AA32763F446005A8AA8 /* Extension.swift */; };
 		D7065AA52763F446005A8AA8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065AA32763F446005A8AA8 /* Extension.swift */; };
 		D7065AAC2764BC27005A8AA8 /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7065AAB2764BC27005A8AA8 /* RoundedCornersShape.swift */; };
@@ -41,6 +37,10 @@
 		D72474512765FFBC009A27F6 /* InactiveTicketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D724744F2765FFBC009A27F6 /* InactiveTicketsView.swift */; };
 		D72474542766111F009A27F6 /* FullActiveTicketCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72474532766111F009A27F6 /* FullActiveTicketCardView.swift */; };
 		D72474552766111F009A27F6 /* FullActiveTicketCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72474532766111F009A27F6 /* FullActiveTicketCardView.swift */; };
+		D7A0E9982767E60700B19DC2 /* UnicoCampaniaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0E9972767E60700B19DC2 /* UnicoCampaniaViewModel.swift */; };
+		D7A0E9992767E60700B19DC2 /* UnicoCampaniaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0E9972767E60700B19DC2 /* UnicoCampaniaViewModel.swift */; };
+		D7A0E99E27680EFE00B19DC2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0E99D27680EFE00B19DC2 /* MainView.swift */; };
+		D7A0E99F27680EFE00B19DC2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0E99D27680EFE00B19DC2 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,6 @@
 
 /* Begin PBXFileReference section */
 		D7065A5B2763E46B005A8AA8 /* UnicoCampaniaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicoCampaniaApp.swift; sourceTree = "<group>"; };
-		D7065A5C2763E46B005A8AA8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D7065A5D2763E46D005A8AA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7065A622763E46D005A8AA8 /* UnicoCampania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnicoCampania.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7065A682763E46D005A8AA8 /* UnicoCampania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnicoCampania.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,8 +73,7 @@
 		D7065A7F2763E46D005A8AA8 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		D7065A812763E46D005A8AA8 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		D7065A972763EBD6005A8AA8 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
-		D7065A9D2763F008005A8AA8 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
-		D7065AA02763F116005A8AA8 /* TicketStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketStore.swift; sourceTree = "<group>"; };
+		D7065A9D2763F008005A8AA8 /* UnicoCampania.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicoCampania.swift; sourceTree = "<group>"; };
 		D7065AA32763F446005A8AA8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		D7065AAB2764BC27005A8AA8 /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		D724743C27653093009A27F6 /* TicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsView.swift; sourceTree = "<group>"; };
@@ -85,6 +83,8 @@
 		D724744C2765FC32009A27F6 /* ActiveTicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTicketsView.swift; sourceTree = "<group>"; };
 		D724744F2765FFBC009A27F6 /* InactiveTicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveTicketsView.swift; sourceTree = "<group>"; };
 		D72474532766111F009A27F6 /* FullActiveTicketCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullActiveTicketCardView.swift; sourceTree = "<group>"; };
+		D7A0E9972767E60700B19DC2 /* UnicoCampaniaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicoCampaniaViewModel.swift; sourceTree = "<group>"; };
+		D7A0E99D27680EFE00B19DC2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,7 @@
 		D7065A5A2763E46B005A8AA8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D7065A5C2763E46B005A8AA8 /* MainView.swift */,
+				D7A0E99D27680EFE00B19DC2 /* MainView.swift */,
 				D724745227660FEE009A27F6 /* TicketsView */,
 			);
 			path = View;
@@ -186,8 +186,8 @@
 		D7065AA62763F769005A8AA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D7065AA02763F116005A8AA8 /* TicketStore.swift */,
-				D7065A9D2763F008005A8AA8 /* Ticket.swift */,
+				D7A0E9972767E60700B19DC2 /* UnicoCampaniaViewModel.swift */,
+				D7065A9D2763F008005A8AA8 /* UnicoCampania.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,10 +213,10 @@
 		D724745227660FEE009A27F6 /* TicketsView */ = {
 			isa = PBXGroup;
 			children = (
+				D724743C27653093009A27F6 /* TicketsView.swift */,
+				D724744C2765FC32009A27F6 /* ActiveTicketsView.swift */,
 				D724744F2765FFBC009A27F6 /* InactiveTicketsView.swift */,
 				D72474532766111F009A27F6 /* FullActiveTicketCardView.swift */,
-				D724744C2765FC32009A27F6 /* ActiveTicketsView.swift */,
-				D724743C27653093009A27F6 /* TicketsView.swift */,
 			);
 			path = TicketsView;
 			sourceTree = "<group>";
@@ -390,12 +390,12 @@
 				D724744D2765FC32009A27F6 /* ActiveTicketsView.swift in Sources */,
 				D724743D27653093009A27F6 /* TicketsView.swift in Sources */,
 				D7065AA42763F446005A8AA8 /* Extension.swift in Sources */,
-				D7065A852763E46D005A8AA8 /* MainView.swift in Sources */,
+				D7A0E9982767E60700B19DC2 /* UnicoCampaniaViewModel.swift in Sources */,
 				D72474502765FFBC009A27F6 /* InactiveTicketsView.swift in Sources */,
-				D7065AA12763F116005A8AA8 /* TicketStore.swift in Sources */,
 				D7065AAC2764BC27005A8AA8 /* RoundedCornersShape.swift in Sources */,
+				D7A0E99E27680EFE00B19DC2 /* MainView.swift in Sources */,
 				D7065A832763E46D005A8AA8 /* UnicoCampaniaApp.swift in Sources */,
-				D7065A9E2763F009005A8AA8 /* Ticket.swift in Sources */,
+				D7065A9E2763F009005A8AA8 /* UnicoCampania.swift in Sources */,
 				D72474542766111F009A27F6 /* FullActiveTicketCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,12 +407,12 @@
 				D724744E2765FC32009A27F6 /* ActiveTicketsView.swift in Sources */,
 				D724743E27653093009A27F6 /* TicketsView.swift in Sources */,
 				D7065AA52763F446005A8AA8 /* Extension.swift in Sources */,
-				D7065A862763E46D005A8AA8 /* MainView.swift in Sources */,
+				D7A0E9992767E60700B19DC2 /* UnicoCampaniaViewModel.swift in Sources */,
 				D72474512765FFBC009A27F6 /* InactiveTicketsView.swift in Sources */,
-				D7065AA22763F116005A8AA8 /* TicketStore.swift in Sources */,
 				D7065AAD2764BC27005A8AA8 /* RoundedCornersShape.swift in Sources */,
+				D7A0E99F27680EFE00B19DC2 /* MainView.swift in Sources */,
 				D7065A842763E46D005A8AA8 /* UnicoCampaniaApp.swift in Sources */,
-				D7065A9F2763F009005A8AA8 /* Ticket.swift in Sources */,
+				D7065A9F2763F009005A8AA8 /* UnicoCampania.swift in Sources */,
 				D72474552766111F009A27F6 /* FullActiveTicketCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

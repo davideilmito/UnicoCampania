@@ -1,76 +1,81 @@
 //
-//  ContentView.swift
-//  Shared
+//  MainView.swift
+//  UnicoCampania
 //
-//  Created by Davide Biancardi on 10/12/21.
+//  Created by Davide Biancardi on 14/12/21.
 //
 
 import SwiftUI
 
 struct MainView: View {
     
+    let viewModel : UnicoCampaniaViewModel
+    
     var body: some View {
-       
+        
+        
         TabView{
             
-            TicketsView()
-                
-            .tabItem{
-               
-                Label("Tickets",systemImage: "square.split.1x2.fill" )
+            TicketsView(activeTicketsArray: viewModel.activeTickets, inactiveTicketsArray: viewModel.inactiveTickets)
             
-            }
+                .tabItem{
+                    
+                    Label("Tickets",systemImage: "square.split.1x2.fill" )
+                    
+                }
             
-       
-           FullActiveTicketCardView()
             
-        
             
-            .tabItem{
+            FullActiveTicketCardView(ticketCard: viewModel.ticketThree)
             
-                Label("Route",systemImage: "tram" )
-    
-            }
+            
+            
+                .tabItem{
+                    
+                    Label("Route",systemImage: "tram" )
+                    
+                }
             
             
             
             Text("Stores")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                
             
-            .tabItem{
             
-                Label("Stores",systemImage: "map.circle" )
-    
-            }
+                .tabItem{
+                    
+                    Label("Stores",systemImage: "map.circle" )
+                    
+                }
             
             
             
             Text("Shop")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                
-            
-            .tabItem{
-            
-                Label("Shop",systemImage: "cart" )
-    
-            }
             
             
+                .tabItem{
+                    
+                    Label("Shop",systemImage: "cart" )
+                    
+                }
             
-        }.accentColor(.white)
-        
-              
+            
+            
+        }
         
         
     }
 }
 
 struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView().preferredColorScheme(.dark).environmentObject(TicketStore())
     
+    static let check : UnicoCampaniaViewModel = UnicoCampaniaViewModel()
+    
+    static var previews: some View {
+        MainView(viewModel: check).preferredColorScheme(.dark)
+        
     }
 }

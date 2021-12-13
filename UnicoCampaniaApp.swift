@@ -10,11 +10,11 @@ import SwiftUI
 @main
 struct UnicoCampaniaApp: App {
     
-    @StateObject var tickets = TicketStore()
+    let unicoCampaniaApp : UnicoCampaniaViewModel = UnicoCampaniaViewModel()
     
     var body: some Scene {
         WindowGroup {
-            MainView().environmentObject(tickets)
+            MainView(viewModel: unicoCampaniaApp)
         }
     }
 }

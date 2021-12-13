@@ -10,15 +10,18 @@ import UIKit
 
 struct TicketsView: View {
         
+    let activeTicketsArray : [UnicoCampania.Ticket]
+    let inactiveTicketsArray : [UnicoCampania.Ticket]
+
     var body: some View {
         
         NavigationView{
                 
             ScrollView(.vertical,showsIndicators: false){
             
-                ActiveTicketsView()
+                ActiveTicketsView(activeTicketsArray: activeTicketsArray)
             
-                InactiveTicketsView()
+                InactiveTicketsView(inactiveTicketsArray: inactiveTicketsArray)
                             
             }
             .navigationTitle("Tickets")
@@ -31,9 +34,13 @@ struct TicketsView: View {
 
 struct TicketsView_Preview: PreviewProvider {
     
+ 
+   static let unicoCampaniaVM = UnicoCampaniaViewModel()
+        
+    
     static var previews: some View {
        
-        TicketsView().preferredColorScheme(.dark).environmentObject(TicketStore())
+        TicketsView(activeTicketsArray: unicoCampaniaVM.activeTickets, inactiveTicketsArray: unicoCampaniaVM.inactiveTickets).preferredColorScheme(.dark)
     
     }
 

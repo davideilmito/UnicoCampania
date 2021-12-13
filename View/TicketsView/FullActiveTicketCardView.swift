@@ -9,20 +9,19 @@ import SwiftUI
 
 struct FullActiveTicketCardView: View {
     
-    var ticket: TicketStore = TicketStore()
-    
+    let ticketCard: UnicoCampania.Ticket
     
     var body: some View {
         
         ScrollView(.vertical,showsIndicators: false){
             
-            VStack(alignment: .leading, spacing: 10){
+            LazyVStack(alignment: .leading, spacing: 10){
                 
                 ZStack{
                     
                     VStack(spacing: 0){
                         
-                        Image(ticket.ticketArray[1].Image)
+                        Image(ticketCard.Image)
                             .resizable()
                             .scaledToFill()
                             .frame(maxWidth: .infinity, maxHeight:250 )
@@ -34,7 +33,7 @@ struct FullActiveTicketCardView: View {
                         
                         ZStack{
                             
-                            ticket.ticketArray[1].gradient
+                            ticketCard.gradient
                             
                                 .mask(RoundedCornersShape(corners: [.bottomLeft,.bottomRight], radius: 20)
                                       
@@ -47,19 +46,19 @@ struct FullActiveTicketCardView: View {
                                 
                                 
                                 
-                                Text(ticket.ticketArray[1].company.uppercased())
+                                Text(ticketCard.company.uppercased())
                                     .font(.caption)
                                     .foregroundColor(.secondaryCardText)
                                     .padding(EdgeInsets(top: 15, leading: 15, bottom:5, trailing: 0))
                                 
                                 VStack(alignment:.leading,spacing: 0){
                                     
-                                    Text(ticket.ticketArray[1].ticketTipology .uppercased())
+                                    Text(ticketCard.tipology .uppercased())
                                         .font(.title2)
                                         .bold()
                                     
                                     
-                                    Text(ticket.ticketArray[1].route)
+                                    Text(ticketCard.route)
                                         .font(.caption)
                                         .foregroundColor(.secondaryCardText)
                                     
@@ -97,7 +96,7 @@ struct FullActiveTicketCardView: View {
                     
                     
                     
-                    if let expiredDate = ticket.ticketArray[1].expiredDate{
+                    if let expiredDate = ticketCard.expiredDate{
                         
                         Group{
                             HStack(spacing:0){
@@ -133,23 +132,23 @@ struct FullActiveTicketCardView: View {
                 } //ZstackCard
                 
                 
-                Text(ticket.ticketArray[1].description)
+                Text(ticketCard.description)
                     .padding()
                 
                 
                 HStack(spacing:0){
                     Text("Issued on: ").bold()
-                    Text(ticket.ticketArray[1].issuedOn,style: .date)
+                    Text(ticketCard.issuedOn,style: .date)
                     Text(" ")
-                    Text(ticket.ticketArray[1].issuedOn,style: .time)
+                    Text(ticketCard.issuedOn,style: .time)
                     
                 }.padding()
                 
                 HStack(spacing:0){
                     Text("Activated on: ").bold()
-                    Text(ticket.ticketArray[1].activatedOn,style: .date)
+                    Text(ticketCard.activatedOn,style: .date)
                     Text(" ")
-                    Text(ticket.ticketArray[1].activatedOn,style: .time)
+                    Text(ticketCard.activatedOn,style: .time)
                 }.padding()
                 
                 
@@ -157,13 +156,18 @@ struct FullActiveTicketCardView: View {
         }
         .background()
         .statusBar(hidden: true)
-        .ignoresSafeArea()
+        .ignoresSafeArea( edges: .top)
         
     }
 }
 
 struct FullActiveTicketCardView_Previews: PreviewProvider {
+    
+    
+    
+    static let unicoCampaniaVM = UnicoCampaniaViewModel()
+    
     static var previews: some View {
-        FullActiveTicketCardView().preferredColorScheme(.dark)
+        FullActiveTicketCardView(ticketCard: unicoCampaniaVM.ticketThree).preferredColorScheme(.dark)
     }
 }

@@ -9,10 +9,10 @@ import SwiftUI
 
 struct InactiveTicketsView: View {
     
-    @EnvironmentObject var tickets:TicketStore
+    let inactiveTicketsArray : [UnicoCampania.Ticket]
     
     var body: some View {
-      
+        
         VStack(spacing:4){
             
             Text("Inactive")
@@ -23,18 +23,15 @@ struct InactiveTicketsView: View {
             
             
             
-            VStack(spacing:18){
+            LazyVStack(spacing:18){
                 
-                ForEach(tickets.ticketArray){
+                ForEach(inactiveTicketsArray){
                     
                     ticket in
                     
-                    
-                    if ticket.expired == true {
+                    Group{
                         
-                        Group{
-                            
-                            ZStack{
+                        ZStack{
                             
                             VStack(spacing: 0){
                                 
@@ -69,7 +66,7 @@ struct InactiveTicketsView: View {
                                         
                                         VStack(alignment:.leading,spacing: 0){
                                             
-                                            Text(ticket.ticketTipology.uppercased())
+                                            Text(ticket.tipology.uppercased())
                                                 .font(.title3)
                                                 .fontWeight(.bold)
                                             
@@ -112,32 +109,23 @@ struct InactiveTicketsView: View {
                             
                             .padding(EdgeInsets(top: 0, leading: 18, bottom: 0, trailing: 18))
                             .opacity(0.4)
-                        
-                                
-//                                        Text("Expired".uppercased())
-//                                            .font(.title2).bold()
-//                                            .padding(.top,358)
-//                                            .padding(.leading,235)
-                                
-                                
-                                Text("Expired".uppercased())
-                                    .font(.title2).bold()
-                                    .frame(maxWidth: .infinity,maxHeight:.infinity,alignment:.bottomTrailing)
-                                    .padding(.trailing,33)
-                                    .padding(.bottom,15)
                             
-                            }
                             
+                            
+                            Text("Expired".uppercased())
+                                .font(.title2).bold()
+                                .frame(maxWidth: .infinity,maxHeight:.infinity,alignment:.bottomTrailing)
+                                .padding(.trailing,33)
+                                .padding(.bottom,15)
                             
                         }
                         
+                        
                     }
                     
-                    else {
-                        
-                        EmptyView()
-                        
-                    }
+                    
+                    
+                    
                     
                     
                 }//ForEach
@@ -153,7 +141,10 @@ struct InactiveTicketsView: View {
 }
 
 struct InactiveTicketsView_Previews: PreviewProvider {
+    static let unicoCampaniaVM = UnicoCampaniaViewModel()
+    
+    
     static var previews: some View {
-        InactiveTicketsView().environmentObject(TicketStore()).preferredColorScheme(.dark)
+        InactiveTicketsView(inactiveTicketsArray: unicoCampaniaVM.inactiveTickets).preferredColorScheme(.dark)
     }
 }

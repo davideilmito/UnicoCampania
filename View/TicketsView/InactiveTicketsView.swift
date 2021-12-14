@@ -21,8 +21,6 @@ struct InactiveTicketsView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading,18)
             
-            
-            
             LazyVStack(spacing:18){
                 
                 ForEach(inactiveTicketsArray){
@@ -113,7 +111,7 @@ struct InactiveTicketsView: View {
                             
                             
                             Text("Expired".uppercased())
-                                .font(.title2).bold()
+                                .font(.caption).bold()
                                 .frame(maxWidth: .infinity,maxHeight:.infinity,alignment:.bottomTrailing)
                                 .padding(.trailing,33)
                                 .padding(.bottom,15)

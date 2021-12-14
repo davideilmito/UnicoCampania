@@ -25,6 +25,7 @@ struct UnicoCampania{
                 
                 activeTickets.append(ticket)
                 
+                
             }else {
                 
                 inactiveTickets.append(ticket)

@@ -163,8 +163,6 @@ struct FullActiveTicketCardView: View {
 
 struct FullActiveTicketCardView_Previews: PreviewProvider {
     
-    
-    
     static let unicoCampaniaVM = UnicoCampaniaViewModel()
     
     static var previews: some View {

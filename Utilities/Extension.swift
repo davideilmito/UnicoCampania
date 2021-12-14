@@ -21,7 +21,6 @@ extension Color {
     static let tirreniaPrimaryColor = Color("TirreniaSecondary")
     static let backgroundFullCardView = Color("backgroundFullTicketView")
 
-    
 }
 
 

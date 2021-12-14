@@ -52,4 +52,16 @@ class UnicoCampaniaViewModel{
         
     }
     
+    
+  //MARK: - User Intent
+    
+    
+    func showTicket(_ ticket: UnicoCampania.Ticket){
+        
+        model.toggleShowTicket(ticket)
+        
+        
+    }
+
+
 }

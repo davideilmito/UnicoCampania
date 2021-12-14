@@ -16,7 +16,7 @@ struct MainView: View {
         
         TabView{
             
-            TicketsView(activeTicketsArray: viewModel.activeTickets, inactiveTicketsArray: viewModel.inactiveTickets)
+            TicketsView(activeTicketsArray: viewModel.activeTickets, inactiveTicketsArray: viewModel.inactiveTickets,viewModel: viewModel)
             
                 .tabItem{
                     

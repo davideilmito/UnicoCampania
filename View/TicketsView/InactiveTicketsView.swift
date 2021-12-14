@@ -11,6 +11,8 @@ struct InactiveTicketsView: View {
     
     let inactiveTicketsArray : [UnicoCampania.Ticket]
     
+    let viewModel: UnicoCampaniaViewModel
+    
     var body: some View {
         
         VStack(spacing:4){
@@ -111,7 +113,7 @@ struct InactiveTicketsView: View {
                             
                             
                             Text("Expired".uppercased())
-                                .font(.caption).bold()
+                                .font(.headline)
                                 .frame(maxWidth: .infinity,maxHeight:.infinity,alignment:.bottomTrailing)
                                 .padding(.trailing,33)
                                 .padding(.bottom,15)
@@ -143,6 +145,6 @@ struct InactiveTicketsView_Previews: PreviewProvider {
     
     
     static var previews: some View {
-        InactiveTicketsView(inactiveTicketsArray: unicoCampaniaVM.inactiveTickets).preferredColorScheme(.dark)
+        InactiveTicketsView(inactiveTicketsArray: unicoCampaniaVM.inactiveTickets,viewModel: unicoCampaniaVM).preferredColorScheme(.dark)
     }
 }

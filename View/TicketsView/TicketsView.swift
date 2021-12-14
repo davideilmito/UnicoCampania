@@ -12,6 +12,8 @@ struct TicketsView: View {
         
     let activeTicketsArray : [UnicoCampania.Ticket]
     let inactiveTicketsArray : [UnicoCampania.Ticket]
+    
+    let viewModel: UnicoCampaniaViewModel
 
     var body: some View {
         
@@ -19,9 +21,9 @@ struct TicketsView: View {
                 
             ScrollView(.vertical,showsIndicators: false){
             
-                ActiveTicketsView(activeTicketsArray: activeTicketsArray)
+                ActiveTicketsView(activeTicketsArray: activeTicketsArray,viewModel: viewModel)
             
-                InactiveTicketsView(inactiveTicketsArray: inactiveTicketsArray)
+                InactiveTicketsView(inactiveTicketsArray: inactiveTicketsArray,viewModel: viewModel)
                             
             }
             .navigationTitle("Tickets")
@@ -40,7 +42,7 @@ struct TicketsView_Preview: PreviewProvider {
     
     static var previews: some View {
        
-        TicketsView(activeTicketsArray: unicoCampaniaVM.activeTickets, inactiveTicketsArray: unicoCampaniaVM.inactiveTickets).preferredColorScheme(.dark)
+        TicketsView(activeTicketsArray: unicoCampaniaVM.activeTickets, inactiveTicketsArray: unicoCampaniaVM.inactiveTickets,viewModel: unicoCampaniaVM).preferredColorScheme(.dark)
     
     }
 

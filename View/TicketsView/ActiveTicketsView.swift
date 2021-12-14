@@ -11,6 +11,9 @@ struct ActiveTicketsView: View {
     
     let activeTicketsArray : [UnicoCampania.Ticket]
     
+    
+    let viewModel: UnicoCampaniaViewModel
+
     var body: some View {
         
         VStack(spacing:4){
@@ -139,7 +142,14 @@ struct ActiveTicketsView: View {
                         } //ZstackCardView
                         
                         
-                    }//Group
+                    }.onTapGesture{
+                        
+                        
+                        viewModel.showTicket(ticket)
+                        
+                    }
+                    
+                    //Group
                     
                     
                     
@@ -170,7 +180,7 @@ struct ActiveTicketsView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        ActiveTicketsView(activeTicketsArray: unicoCampaniaVM.activeTickets).preferredColorScheme(.dark)
+        ActiveTicketsView(activeTicketsArray: unicoCampaniaVM.activeTickets,viewModel: unicoCampaniaVM).preferredColorScheme(.dark)
         
     }
 }

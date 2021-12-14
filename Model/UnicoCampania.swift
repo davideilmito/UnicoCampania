@@ -38,13 +38,25 @@ struct UnicoCampania{
     }
     
 
-    
-    
-    
-    func showTicket(_ ticket : Ticket){
+    func searchTicket(by id: String) -> Ticket {
+        
+        for ticket in activeTickets {
+            <#body#>
+        }
         
         
         
+        
+    }
+    
+    
+    func toggleShowTicket(_ ticket : Ticket){
+        
+        let tappedTicket = searchTicket(by: ticket.id.uuidString)
+        
+        print(ticket.company)
+        
+//        ticket.show.toggle()
         
         
     }
@@ -60,12 +72,10 @@ struct UnicoCampania{
         var gradient:LinearGradient
         var Image:String
         var issuedOn: Date
-        var activatedOn: Date{
-            issuedOn.addingTimeInterval(400)
-            
-        }
+        var activatedOn: Date{ issuedOn.addingTimeInterval(400) }
        
         var description : String = "L'abbonamento va attivato entro il giorno 15 del mese di utilizzo. Valido fino alle ore 24:00 dell'ultimo giorno del mese solare di attivazione"
+        
         var show = false
             
     }

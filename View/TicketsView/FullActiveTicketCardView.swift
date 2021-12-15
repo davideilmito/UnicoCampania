@@ -13,6 +13,8 @@ struct FullActiveTicketCardView: View {
     
     var ticketCard : UnicoCampania.Ticket
     
+    let viewModel: UnicoCampaniaViewModel
+    
     var body: some View {
          
         ScrollView(.vertical,showsIndicators: false){
@@ -130,6 +132,22 @@ struct FullActiveTicketCardView: View {
                         
                     
                     
+                    
+                    Button {
+                        
+                        showModal.toggle()
+                        viewModel.unshowTicket()
+                        
+                          } label: {
+                              Label("",systemImage: "x.circle").foregroundColor(.white)
+                                  .font(.title)
+                              
+                          }
+                          .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topTrailing)
+                          .padding(.trailing,15)
+                          .padding(.top,15)
+                    
+                    
                 } //ZstackCard
                 
                 
@@ -174,6 +192,6 @@ struct FullActiveTicketCardView_Previews: PreviewProvider {
     
     static var previews: some View {
         FullActiveTicketCardView(showModal: .constant(true), ticketCard:
-                                    unicoCampaniaVM.ticketThree).preferredColorScheme(.dark)
+                                    unicoCampaniaVM.ticketThree,viewModel: unicoCampaniaVM).preferredColorScheme(.dark)
     }
 }

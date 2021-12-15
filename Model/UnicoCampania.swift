@@ -96,7 +96,7 @@ struct UnicoCampania{
            
        }
     
-    mutating func unshowTicket(_ ticket : Ticket){
+    mutating func unshowTicket(){
         
         let tappedTicketIndex = indexOfTheTicketToShow
         

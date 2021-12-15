@@ -35,7 +35,7 @@ struct TicketsView: View {
             if viewModel.getTicketToShow() != nil {
                 
                 
-                FullActiveTicketCardView(showModal: $showModal, ticketCard: viewModel.getTicketToShow()!)
+                FullActiveTicketCardView(showModal: $showModal, ticketCard: viewModel.getTicketToShow()!,viewModel: viewModel)
                  
                 
                 

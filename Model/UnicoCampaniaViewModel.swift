@@ -77,6 +77,11 @@ class UnicoCampaniaViewModel: ObservableObject{
         
     }
     
+    func unshowTicket()  {
+        
+        model.unshowTicket()
+        
+    }
     
 
 

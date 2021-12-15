@@ -9,16 +9,12 @@ import SwiftUI
 
 struct FullActiveTicketCardView: View {
     
-    @Binding var ticketCard: UnicoCampania.Ticket
-        
-    let timer = Timer.publish(every: 1, on: .main, in:
-                                    .common).autoconnect()
+    @Binding var showModal : Bool
     
-  
+    var ticketCard : UnicoCampania.Ticket
+    
     var body: some View {
-        
-
-        
+         
         ScrollView(.vertical,showsIndicators: false){
             
             LazyVStack(alignment: .leading, spacing: 10){
@@ -172,11 +168,12 @@ struct FullActiveTicketCardView: View {
     }
 }
 
-//struct FullActiveTicketCardView_Previews: PreviewProvider {
-//    
-//    static let unicoCampaniaVM = UnicoCampaniaViewModel()
-//    
-//    static var previews: some View {
-//        FullActiveTicketCardView(ticketCard: unicoCampaniaVM.ticketThree,).preferredColorScheme(.dark)
-//    }
-//}
+struct FullActiveTicketCardView_Previews: PreviewProvider {
+    
+    static let unicoCampaniaVM = UnicoCampaniaViewModel()
+    
+    static var previews: some View {
+        FullActiveTicketCardView(showModal: .constant(true), ticketCard:
+                                    unicoCampaniaVM.ticketThree).preferredColorScheme(.dark)
+    }
+}

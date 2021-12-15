@@ -24,3 +24,19 @@ extension Color {
 }
 
 
+extension Array{
+    
+    var hasOnlyOneElement: Bool{
+        
+        if count == 1{
+            
+            return true
+            
+        }
+        else {
+            return false
+        }
+        
+    }
+    
+}

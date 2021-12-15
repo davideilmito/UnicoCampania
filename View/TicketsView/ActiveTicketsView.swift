@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ActiveTicketsView: View {
     
-   let viewModel: UnicoCampaniaViewModel
-   @State var ticketSelected : UnicoCampania.Ticket = UnicoCampania.Ticket()
-   @State var showModal = false
+    let viewModel: UnicoCampaniaViewModel
+    @Binding var showModal : Bool
     
     var body: some View {
         
-       
+      
+        
         VStack(spacing:4){
             
             Text("Active")
@@ -33,52 +33,42 @@ struct ActiveTicketsView: View {
                     
                     TicketCardView(ticket: ticket)
                         .onTapGesture(perform: {
-                          viewModel.showTicket(ticket)
-                            ticketSelected = ticket
+                            viewModel.showTicket(ticket)
                             print("\(ticket.company)")
                             showModal.toggle()
                         })
-                        
-                 
-                
+                    
+                    
+                    
                 }//ForEach
                 
                 
-                
-                
-       
-                    
-                }//Vstack Cards
-                
-                
-                
-                
-        }.sheet(isPresented: $showModal) {
-        
-            FullActiveTicketCardView(ticketCard: $ticketSelected)
-        
+            }//Vstack Card
+            
+            
         }
+        
+   
+   
+                            
+          
+        
+        
+        
+    }
+}
 
-            
-    
-        }
-            
-            
-        }
-        
-        
+
 
 
 
 struct ActiveTicketsView_Previews: PreviewProvider {
     
-    
     static let unicoCampaniaVM = UnicoCampaniaViewModel()
-    
     
     static var previews: some View {
         
-        ActiveTicketsView(viewModel: unicoCampaniaVM,ticketSelected: unicoCampaniaVM.ticketThree).preferredColorScheme(.dark)
+        ActiveTicketsView(viewModel: unicoCampaniaVM,showModal: .constant(false)).preferredColorScheme(.dark)
         
     }
 }

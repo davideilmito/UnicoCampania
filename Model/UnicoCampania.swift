@@ -8,12 +8,30 @@
 import Foundation
 import SwiftUI
 
-
-
 struct UnicoCampania{
     
     private(set) var tickets: Array<Ticket> = []
    
+     private var indexOfTheTicketToShow: Int? {
+        
+        get{
+            
+            let ticketIndexesWhereShowDetailsIsTrue = tickets.indices.filter {tickets[$0].showDetails}
+            
+            if ticketIndexesWhereShowDetailsIsTrue.hasOnlyOneElement{
+                
+                return ticketIndexesWhereShowDetailsIsTrue.first
+
+            }
+            
+            else {return nil}
+            
+        }
+      
+        
+        
+    }
+    
     
     init(ticketArray : [Ticket]){
         
@@ -21,12 +39,8 @@ struct UnicoCampania{
             tickets.append(ticket)
         }
     }
-    
-    
-    
-    
       
-    func getActiveTickets()->[Ticket] {
+    func getActiveTickets()-> [Ticket]{
         
         var activeTickets : [Ticket] = []
         
@@ -40,7 +54,7 @@ struct UnicoCampania{
         return activeTickets
     }
     
-    func getinactiveTickets()->[Ticket] {
+    func getinactiveTickets()-> [Ticket]{
         
         var inactiveTickets : [Ticket] = []
         
@@ -50,44 +64,46 @@ struct UnicoCampania{
                 inactiveTickets.append(ticket)
             }
         }
+        
         return inactiveTickets
+    
     }
     
-
-    func searchTicketIndex(by id: String) -> Int? {
     
-        var  ticketIndex : Int = 0
+    func getTicketToShow()-> Ticket?{
         
-        for ticket in tickets {
+        if indexOfTheTicketToShow != nil {
             
-            if ticket.id.uuidString == id{
-                
-                return ticketIndex
-                
-            }
             
-            ticketIndex += 1
+            return tickets[indexOfTheTicketToShow!]
             
         }
         
         return nil
-        
     }
     
+ 
+    mutating func showTicket(_ ticket : Ticket){
+           
+          let tappedTicketIndex = tickets.firstIndex{ ticket.id.uuidString == $0.id.uuidString }
+           
+           if tappedTicketIndex != nil {
+               
+               tickets[tappedTicketIndex!].showDetails = true
+                
+               
+           }
+           
+       }
     
-   mutating func toggleShowTicket(_ ticket : Ticket){
+    mutating func unshowTicket(_ ticket : Ticket){
         
-        let tappedTicketIndex = searchTicketIndex(by: ticket.id.uuidString)
+        let tappedTicketIndex = indexOfTheTicketToShow
         
         if tappedTicketIndex != nil {
             
-            tickets[tappedTicketIndex!].show.toggle()
+            tickets[tappedTicketIndex!].showDetails = false
          
-        }
-        
-        for ticket in tickets{
-        print("\(ticket.company) \(ticket.show) ")
-            
         }
         
     }
@@ -105,7 +121,7 @@ struct UnicoCampania{
         var issuedOn: Date = Date()
         var activatedOn: Date{ issuedOn.addingTimeInterval(400) }
         var description : String = "L'abbonamento va attivato entro il giorno 15 del mese di utilizzo. Valido fino alle ore 24:00 dell'ultimo giorno del mese solare di attivazione"
-        var show = false
+        var showDetails = false
             
     }
 }

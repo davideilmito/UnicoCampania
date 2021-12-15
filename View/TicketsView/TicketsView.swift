@@ -9,10 +9,7 @@ import SwiftUI
 import UIKit
 
 struct TicketsView: View {
-        
-    let activeTicketsArray : [UnicoCampania.Ticket]
-    let inactiveTicketsArray : [UnicoCampania.Ticket]
-    
+
     let viewModel: UnicoCampaniaViewModel
 
     var body: some View {
@@ -21,9 +18,9 @@ struct TicketsView: View {
                 
             ScrollView(.vertical,showsIndicators: false){
             
-                ActiveTicketsView(activeTicketsArray: activeTicketsArray,viewModel: viewModel)
+                ActiveTicketsView(viewModel: viewModel)
             
-                InactiveTicketsView(inactiveTicketsArray: inactiveTicketsArray,viewModel: viewModel)
+                InactiveTicketsView(viewModel: viewModel)
                             
             }
             .navigationTitle("Tickets")
@@ -42,7 +39,7 @@ struct TicketsView_Preview: PreviewProvider {
     
     static var previews: some View {
        
-        TicketsView(activeTicketsArray: unicoCampaniaVM.activeTickets, inactiveTicketsArray: unicoCampaniaVM.inactiveTickets,viewModel: unicoCampaniaVM).preferredColorScheme(.dark)
+        TicketsView(viewModel: unicoCampaniaVM).preferredColorScheme(.dark)
     
     }
 

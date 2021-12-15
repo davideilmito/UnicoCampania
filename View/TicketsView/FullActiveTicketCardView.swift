@@ -9,9 +9,15 @@ import SwiftUI
 
 struct FullActiveTicketCardView: View {
     
-    let ticketCard: UnicoCampania.Ticket
+    @Binding var ticketCard: UnicoCampania.Ticket
+        
+    let timer = Timer.publish(every: 1, on: .main, in:
+                                    .common).autoconnect()
     
+  
     var body: some View {
+        
+
         
         ScrollView(.vertical,showsIndicators: false){
             
@@ -118,15 +124,14 @@ struct FullActiveTicketCardView: View {
                     }else {EmptyView()
                     }
                     
-                    Text(Date(),style: .time)
-                        .font(.title2)
-                        .bold()
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
-                        .padding(.leading, 15)
-                        .padding(.bottom,15)
-                  
-                    
-                  
+                
+                        Text(Date(),style: .time)
+                            .font(.title2)
+                            .bold()
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+                            .padding(.leading, 15)
+                            .padding(.bottom,15)
+                        
                     
                     
                 } //ZstackCard
@@ -148,7 +153,12 @@ struct FullActiveTicketCardView: View {
                     Text("Activated on: ").bold()
                     Text(ticketCard.activatedOn,style: .date)
                     Text(" ")
-                    Text(ticketCard.activatedOn,style: .time)
+                    Text(ticketCard.activatedOn,style: .time).opacity(1)
+                    
+                    
+                
+                
+                
                 }.padding()
                 
                 
@@ -158,14 +168,15 @@ struct FullActiveTicketCardView: View {
         .statusBar(hidden: true)
         .ignoresSafeArea( edges: .top)
         
+        
     }
 }
 
-struct FullActiveTicketCardView_Previews: PreviewProvider {
-    
-    static let unicoCampaniaVM = UnicoCampaniaViewModel()
-    
-    static var previews: some View {
-        FullActiveTicketCardView(ticketCard: unicoCampaniaVM.ticketThree).preferredColorScheme(.dark)
-    }
-}
+//struct FullActiveTicketCardView_Previews: PreviewProvider {
+//    
+//    static let unicoCampaniaVM = UnicoCampaniaViewModel()
+//    
+//    static var previews: some View {
+//        FullActiveTicketCardView(ticketCard: unicoCampaniaVM.ticketThree,).preferredColorScheme(.dark)
+//    }
+//}

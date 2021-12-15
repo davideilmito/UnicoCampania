@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-@main
+ @main
 struct UnicoCampaniaApp: App {
     
     let unicoCampaniaApp : UnicoCampaniaViewModel = UnicoCampaniaViewModel()
     
     var body: some Scene {
         WindowGroup {
-            MainView(viewModel: unicoCampaniaApp)
+            TabsView(viewModel: unicoCampaniaApp)
         }
     }
 }

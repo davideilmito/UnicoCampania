@@ -9,8 +9,6 @@ import SwiftUI
 
 struct InactiveTicketsView: View {
     
-    let inactiveTicketsArray : [UnicoCampania.Ticket]
-    
     let viewModel: UnicoCampaniaViewModel
     
     var body: some View {
@@ -25,7 +23,7 @@ struct InactiveTicketsView: View {
             
             LazyVStack(spacing:18){
                 
-                ForEach(inactiveTicketsArray){
+                ForEach(viewModel.inactiveTickets){
                     
                     ticket in
                     
@@ -93,17 +91,11 @@ struct InactiveTicketsView: View {
                                     
                                     .frame(maxWidth:.infinity,maxHeight: 150,alignment: .leading)
                                     
-                                    
-                                    
-                                    
-                                    
-                                    
+                           
                                     
                                 }//ZStack
                                 
-                                
-                                
-                                
+                             
                                 
                             } //VstackCard
                             
@@ -124,10 +116,6 @@ struct InactiveTicketsView: View {
                     }
                     
                     
-                    
-                    
-                    
-                    
                 }//ForEach
                 
                 
@@ -141,10 +129,11 @@ struct InactiveTicketsView: View {
 }
 
 struct InactiveTicketsView_Previews: PreviewProvider {
+    
     static let unicoCampaniaVM = UnicoCampaniaViewModel()
-    
-    
     static var previews: some View {
-        InactiveTicketsView(inactiveTicketsArray: unicoCampaniaVM.inactiveTickets,viewModel: unicoCampaniaVM).preferredColorScheme(.dark)
+        InactiveTicketsView(viewModel: unicoCampaniaVM).preferredColorScheme(.dark)
     }
+
+
 }

@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct TabsView: View {
     
-    let viewModel : UnicoCampaniaViewModel
+  @ObservedObject var viewModel : UnicoCampaniaViewModel
     
     var body: some View {
         
         
         TabView{
             
-            TicketsView(activeTicketsArray: viewModel.activeTickets, inactiveTicketsArray: viewModel.inactiveTickets,viewModel: viewModel)
+            TicketsView(viewModel: viewModel)
             
                 .tabItem{
                     
@@ -25,9 +25,9 @@ struct MainView: View {
                 }
             
             
-            
-            FullActiveTicketCardView(ticketCard: viewModel.ticketThree)
-            
+            Text("Route")
+                .font(.largeTitle)
+                .fontWeight(.bold)
             
             
                 .tabItem{
@@ -75,7 +75,7 @@ struct MainView_Previews: PreviewProvider {
     static let check : UnicoCampaniaViewModel = UnicoCampaniaViewModel()
     
     static var previews: some View {
-        MainView(viewModel: check).preferredColorScheme(.dark)
+        TabsView(viewModel: check).preferredColorScheme(.dark)
         
     }
 }

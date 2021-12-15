@@ -139,8 +139,8 @@ struct FullActiveTicketCardView: View {
                         viewModel.unshowTicket()
                         
                           } label: {
-                              Label("",systemImage: "x.circle").foregroundColor(.white)
-                                  .font(.title)
+                              Label("",systemImage: "x.circle.fill").foregroundColor(.white)
+                                  .font(.title )
                               
                           }
                           .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topTrailing)

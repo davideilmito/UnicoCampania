@@ -130,10 +130,7 @@ struct FullInactiveTicketCardView: View {
                
            }
        } 
-            .statusBar(hidden: true)
-            .ignoresSafeArea( edges: .top)
-            
-    
+          
         
             Button {
                 
@@ -152,7 +149,10 @@ struct FullInactiveTicketCardView: View {
             
         
         
-    }
+    }  .statusBar(hidden: true)
+            .ignoresSafeArea( edges: .top)
+            
+    
         
     }
 }

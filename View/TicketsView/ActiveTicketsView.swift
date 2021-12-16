@@ -13,9 +13,7 @@ struct ActiveTicketsView: View {
     @Binding var showModal : Bool
     
     var body: some View {
-        
       
-        
         VStack(spacing:4){
             
             Text("Active")
@@ -47,18 +45,9 @@ struct ActiveTicketsView: View {
             
             
         }
-        
-   
-   
-                            
-          
-        
-        
-        
+      
     }
 }
-
-
 
 
 

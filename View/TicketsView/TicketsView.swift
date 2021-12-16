@@ -36,9 +36,7 @@ struct TicketsView: View {
                 
                 
                 FullActiveTicketCardView(showModal: $showModal, ticketCard: viewModel.getTicketToShow()!,viewModel: viewModel)
-                 
-                
-                
+    
             }
             
         }

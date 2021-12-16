@@ -71,18 +71,11 @@ struct FullActiveTicketCardView: View {
                                 .padding(.leading,15)
                                 
                                 Spacer()
-                                
-                                
-                                
-                                
+        
                             }//VstackCardText
-                            
-                            
+                                        
                             .frame(maxWidth:.infinity,maxHeight: .infinity,alignment: .leading)
-                            
-                            
-                            
-                            
+       
                             Image("Qrcode")
                                 .resizable()
                                 .clipShape(RoundedRectangle(cornerRadius: 20))          .frame(width: 220, height: 220, alignment: .center)
@@ -95,9 +88,6 @@ struct FullActiveTicketCardView: View {
                         
                         
                     } //VstackCard
-                    
-                    
-                    
                     
                     
                     if let expiredDate = ticketCard.expiredDate{
@@ -139,7 +129,7 @@ struct FullActiveTicketCardView: View {
                         viewModel.unshowTicket()
                         
                           } label: {
-                              Label("",systemImage: "x.circle.fill").foregroundColor(.white)
+                              Label("",systemImage: "xmark.circle.fill").foregroundColor(.white)
                                   .font(.title )
                               
                           }
@@ -168,11 +158,7 @@ struct FullActiveTicketCardView: View {
                     Text(ticketCard.activatedOn,style: .date)
                     Text(" ")
                     Text(ticketCard.activatedOn,style: .time).opacity(1)
-                    
-                    
-                
-                
-                
+    
                 }.padding()
                 
                 

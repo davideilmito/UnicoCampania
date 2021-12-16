@@ -13,11 +13,10 @@ struct ActiveTicketsView: View {
     @Binding var showModal : Bool
     
     var body: some View {
-      
+        
         VStack(spacing:4){
             
             Text("Active")
-            
                 .font(.title2)
                 .bold()
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -42,10 +41,14 @@ struct ActiveTicketsView: View {
                 
                 
             }//Vstack Card
-            
+            .fullScreenCover(isPresented: $showModal){
+                
+                FullActiveTicketCardView(showModal: $showModal, ticketCard: viewModel.getTicketToShow()!, viewModel: viewModel )
+                
+            }
             
         }
-      
+        
     }
 }
 

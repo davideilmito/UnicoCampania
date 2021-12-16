@@ -9,53 +9,45 @@ import SwiftUI
 import UIKit
 
 struct TicketsView: View {
-
+    
     let viewModel: UnicoCampaniaViewModel
     @State var showModal = false
-
+    
+    @State var showInModal = false
+    
+    
     var body: some View {
         
-        if !showModal{
-        
         NavigationView{
-                
+            
             ScrollView(.vertical,showsIndicators: false){
-            
+                
                 ActiveTicketsView(viewModel: viewModel,showModal: $showModal)
-            
-                InactiveTicketsView(viewModel: viewModel)
-                            
+                
+                InactiveTicketsView(viewModel: viewModel,showInModal: $showInModal)
+                
             }
             .navigationTitle("Tickets")
             
         }
         
-        }else {
-            
-            if viewModel.getTicketToShow() != nil {
-                
-                
-                FullActiveTicketCardView(showModal: $showModal, ticketCard: viewModel.getTicketToShow()!,viewModel: viewModel)
-    
-            }
-            
-        }
-        
     }
-
+    
 }
+
+
 
 struct TicketsView_Preview: PreviewProvider {
     
- 
-   static let unicoCampaniaVM = UnicoCampaniaViewModel()
-        
+    
+    static let unicoCampaniaVM = UnicoCampaniaViewModel()
+    
     
     static var previews: some View {
-       
+        
         TicketsView(viewModel: unicoCampaniaVM).preferredColorScheme(.dark)
-    
+        
     }
-
+    
 }
 

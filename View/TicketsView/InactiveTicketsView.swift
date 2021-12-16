@@ -11,6 +11,8 @@ struct InactiveTicketsView: View {
     
     let viewModel: UnicoCampaniaViewModel
     
+    @Binding var showInModal: Bool
+    
     var body: some View {
         
         VStack(spacing:4){
@@ -27,8 +29,7 @@ struct InactiveTicketsView: View {
                     
                     ticket in
                     
-                    Group{
-                        
+                    
                         ZStack{
                             
                             VStack(spacing: 0){
@@ -91,11 +92,11 @@ struct InactiveTicketsView: View {
                                     
                                     .frame(maxWidth:.infinity,maxHeight: 150,alignment: .leading)
                                     
-                           
+                                    
                                     
                                 }//ZStack
                                 
-                             
+                                
                                 
                             } //VstackCard
                             
@@ -113,7 +114,14 @@ struct InactiveTicketsView: View {
                         }
                         
                         
-                    }
+                    .contentShape(Rectangle())
+                    
+                   
+                    .onTapGesture(perform: {
+                        viewModel.showTicket(ticket)
+                        print("\(ticket.company)")
+                        showInModal.toggle()
+                    })
                     
                     
                 }//ForEach
@@ -121,19 +129,28 @@ struct InactiveTicketsView: View {
                 
             }
             
+         
+            
+        }   .fullScreenCover(isPresented: $showInModal){
+            
+            FullInactiveTicketCardView(showInModal: $showInModal, ticketCard: viewModel.getTicketToShow()!, viewModel: viewModel)
+            
         }
         
         
         
+        
     }
+
+
 }
 
 struct InactiveTicketsView_Previews: PreviewProvider {
     
     static let unicoCampaniaVM = UnicoCampaniaViewModel()
     static var previews: some View {
-        InactiveTicketsView(viewModel: unicoCampaniaVM).preferredColorScheme(.dark)
+        InactiveTicketsView(viewModel: unicoCampaniaVM,showInModal: .constant(false)).preferredColorScheme(.dark)
     }
-
-
+    
+    
 }

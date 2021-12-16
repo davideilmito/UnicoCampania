@@ -17,6 +17,8 @@ struct FullActiveTicketCardView: View {
     
     var body: some View {
          
+        ZStack{
+        
         ScrollView(.vertical,showsIndicators: false){
             
             LazyVStack(alignment: .leading, spacing: 10){
@@ -123,19 +125,7 @@ struct FullActiveTicketCardView: View {
                     
                     
                     
-                    Button {
-                        
-                        showModal.toggle()
-                        viewModel.unshowTicket()
-                        
-                          } label: {
-                              Label("",systemImage: "xmark.circle.fill").foregroundColor(.white)
-                                  .font(.title )
-                              
-                          }
-                          .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topTrailing)
-                          .padding(.trailing,15)
-                          .padding(.top,15)
+                
                     
                     
                 } //ZstackCard
@@ -164,11 +154,31 @@ struct FullActiveTicketCardView: View {
                 
             }
         }
-        .background()
+            
+    
+      
+     
+            Button {
+                
+                showModal.toggle()
+                viewModel.unshowTicket()
+                
+                  } label: {
+                      Label("",systemImage: "xmark.circle.fill").foregroundColor(.white)
+                          .font(.title )
+                      
+                  }
+                  .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topTrailing)
+                  .padding(.trailing,15)
+                  .padding(.top,15)
+            
+           
+            
+            
+    }
+        
         .statusBar(hidden: true)
         .ignoresSafeArea( edges: .top)
-        
-        
     }
 }
 

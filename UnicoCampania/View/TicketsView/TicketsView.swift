@@ -12,9 +12,7 @@ struct TicketsView: View {
     
     let viewModel: UnicoCampaniaViewModel
     @State var showModal = false
-    
     @State var showInModal = false
-    
     
     var body: some View {
         

@@ -82,7 +82,7 @@
 		D7065AAB2764BC27005A8AA8 /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		D724743C27653093009A27F6 /* TicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsView.swift; sourceTree = "<group>"; };
 		D7247443276565B9009A27F6 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
-		D7247446276566D3009A27F6 /* UnicoCampania--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "UnicoCampania--iOS--Info.plist"; sourceTree = "<group>"; };
+		D7247446276566D3009A27F6 /* UnicoCampania--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnicoCampania--iOS--Info.plist"; sourceTree = "<group>"; };
 		D724744727656808009A27F6 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		D724744C2765FC32009A27F6 /* ActiveTicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTicketsView.swift; sourceTree = "<group>"; };
 		D724744F2765FFBC009A27F6 /* InactiveTicketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveTicketsView.swift; sourceTree = "<group>"; };
@@ -129,15 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				D7247446276566D3009A27F6 /* UnicoCampania--iOS--Info.plist */,
-				D7065A5B2763E46B005A8AA8 /* UnicoCampaniaApp.swift */,
-				D7247442276565A3009A27F6 /* Fonts */,
-				D7065AAA2764BBF6005A8AA8 /* Utilities */,
-				D7065A5A2763E46B005A8AA8 /* View */,
-				D7065AA62763F769005A8AA8 /* Model */,
-				D7065A972763EBD6005A8AA8 /* Color.xcassets */,
-				D7065A5D2763E46D005A8AA8 /* Assets.xcassets */,
-				D7065A692763E46D005A8AA8 /* macOS */,
-				D7065A722763E46D005A8AA8 /* Tests iOS */,
+				D770EB5C2812B7C300ECBF1E /* UnicoCampania */,
 				D7065A632763E46D005A8AA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -192,7 +184,6 @@
 		D7065AA62763F769005A8AA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D7A0E9972767E60700B19DC2 /* UnicoCampaniaViewModel.swift */,
 				D7065A9D2763F008005A8AA8 /* UnicoCampania.swift */,
 			);
 			path = Model;
@@ -227,6 +218,31 @@
 				D7648B0F276B7B17007D5AE2 /* FullInactiveTicketCardView.swift */,
 			);
 			path = TicketsView;
+			sourceTree = "<group>";
+		};
+		D770EB5C2812B7C300ECBF1E /* UnicoCampania */ = {
+			isa = PBXGroup;
+			children = (
+				D7065A722763E46D005A8AA8 /* Tests iOS */,
+				D7065A692763E46D005A8AA8 /* macOS */,
+				D7065A5A2763E46B005A8AA8 /* View */,
+				D7065A972763EBD6005A8AA8 /* Color.xcassets */,
+				D7065A5D2763E46D005A8AA8 /* Assets.xcassets */,
+				D7065A5B2763E46B005A8AA8 /* UnicoCampaniaApp.swift */,
+				D7065AAA2764BBF6005A8AA8 /* Utilities */,
+				D770EB5D2812B82000ECBF1E /* ViewModel */,
+				D7247442276565A3009A27F6 /* Fonts */,
+				D7065AA62763F769005A8AA8 /* Model */,
+			);
+			path = UnicoCampania;
+			sourceTree = "<group>";
+		};
+		D770EB5D2812B82000ECBF1E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D7A0E9972767E60700B19DC2 /* UnicoCampaniaViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

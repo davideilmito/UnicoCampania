@@ -31,8 +31,7 @@ struct FullActiveTicketCardView: View {
                             .resizable()
                             .scaledToFill()
                             .frame(maxWidth: .infinity, maxHeight:250 )
-                        
-                        
+
                             .clipShape(RoundedCornersShape(corners:[.topLeft,.topRight], radius: 20))
                             .opacity(0.65)
                         
@@ -116,8 +115,8 @@ struct FullActiveTicketCardView: View {
                     
                 
                         Text(Date(),style: .time)
-                            .font(.title2)
-                            .bold()
+                            .font(.title3)
+                            .fontWeight(.semibold)
                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
                             .padding(.leading, 15)
                             .padding(.bottom,15)
